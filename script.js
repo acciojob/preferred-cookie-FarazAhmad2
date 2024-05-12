@@ -16,8 +16,8 @@ function onLoad() {
   const data = new Map(
     document.cookie.split("; ").map((item) => item.split("="))
   );
-  document.getElementById("fontsize").value = data.get("fontsize");
-  document.getElementById("fontcolor").value = data.get("fontcolor");
+  const fontSize = document.getElementById("fontsize").value;
+  const fontColor = document.getElementById("fontcolor").value;
   document.documentElement.style.setProperty("--fontsize", `${fontSize}px`);
   document.documentElement.style.setProperty("--fontcolor", fontColor);
 }
