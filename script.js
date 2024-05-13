@@ -2,8 +2,7 @@
 onLoad();
 
 const form = document.querySelector("form");
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+form.addEventListener("submit", () => {
   const fontSize = document.getElementById("fontsize").value;
   const fontColor = document.getElementById("fontcolor").value;
   document.cookie = `fontsize=${fontSize}; path=/`;
